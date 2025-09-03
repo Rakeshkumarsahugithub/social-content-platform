@@ -1,0 +1,102 @@
+/* Profile Tabs Styles */
+.profile-tabs {
+  background: var(--surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab-button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+  background: var(--border-color);
+}
+
+.tab-button.active {
+  background: var(--background-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tab-count {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.tabs-content {
+  padding: 30px;
+}
+
+.private-content {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.private-message {
+  color: var(--text-secondary);
+}
+
+.private-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.private-message h3 {
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.posts-placeholder,
+.followers-placeholder,
+.following-placeholder {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+
+.recent-posts-preview {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.post-preview {
+  background: var(--background-color);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tabs-header {
+    flex-direction: column;
+  }
+  
+  .tab-button {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

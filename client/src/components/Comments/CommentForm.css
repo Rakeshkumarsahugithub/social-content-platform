@@ -1,0 +1,139 @@
+/* Comment Form Styles */
+.comment-form {
+  width: 100%;
+  margin: 16px 0;
+}
+
+.comment-form-content {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.comment-form-content:focus-within {
+  border-color: var(--primary-color);
+}
+
+.comment-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 40px;
+  padding: 0;
+  font-family: inherit;
+}
+
+.comment-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.comment-form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+.comment-char-count {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.comment-char-count .warning {
+  color: var(--error-color);
+  font-weight: 500;
+}
+
+.comment-form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.comment-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 60px;
+}
+
+.comment-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comment-btn-cancel {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.comment-btn-cancel:hover:not(:disabled) {
+  background: var(--border-color);
+  color: var(--text-primary);
+}
+
+.comment-btn-submit {
+  background: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.comment-btn-submit:hover:not(:disabled) {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.comment-btn-submit:disabled {
+  background: var(--border-color);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .comment-form-content {
+  background: #1a1a1a;
+  border-color: #333333;
+}
+
+[data-theme="dark"] .comment-form-content:focus-within {
+  border-color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comment-form {
+    margin: 12px 0;
+  }
+  
+  .comment-form-content {
+    padding: 10px;
+  }
+  
+  .comment-input {
+    font-size: 13px;
+  }
+  
+  .comment-form-footer {
+    margin-top: 10px;
+    padding-top: 6px;
+  }
+  
+  .comment-btn {
+    padding: 5px 12px;
+    font-size: 12px;
+    min-width: 50px;
+  }
+}

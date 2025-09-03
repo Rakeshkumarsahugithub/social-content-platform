@@ -1,0 +1,252 @@
+.skeleton-container {
+  width: 100%;
+}
+
+.skeleton-item {
+  margin-bottom: 16px;
+}
+
+/* Base skeleton animation */
+.skeleton-line,
+.skeleton-avatar,
+.skeleton-avatar-large,
+.skeleton-avatar-small,
+.skeleton-media,
+.skeleton-action-btn,
+.skeleton-follow-btn,
+.skeleton-header-cell,
+.skeleton-cell-content {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Post Skeleton */
+.skeleton-post {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.skeleton-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.skeleton-user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-name {
+  height: 16px;
+  width: 120px;
+}
+
+.skeleton-username {
+  height: 14px;
+  width: 80px;
+}
+
+.skeleton-content {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-text-long {
+  height: 14px;
+  width: 100%;
+}
+
+.skeleton-text-medium {
+  height: 14px;
+  width: 75%;
+}
+
+.skeleton-text-short {
+  height: 14px;
+  width: 50%;
+}
+
+.skeleton-media {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.skeleton-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.skeleton-action-btn {
+  height: 32px;
+  width: 80px;
+  border-radius: 16px;
+}
+
+/* User Skeleton */
+.skeleton-user {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-avatar-large {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.skeleton-user-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-bio {
+  height: 14px;
+  width: 200px;
+}
+
+.skeleton-follow-btn {
+  height: 36px;
+  width: 100px;
+  border-radius: 18px;
+}
+
+/* Comment Skeleton */
+.skeleton-comment {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.skeleton-avatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.skeleton-comment-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skeleton-name-small {
+  height: 12px;
+  width: 100px;
+}
+
+/* Table Skeleton */
+.skeleton-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-table-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 16px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.skeleton-header-cell {
+  height: 16px;
+}
+
+.skeleton-table-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.skeleton-table-cell {
+  display: flex;
+  align-items: center;
+}
+
+.skeleton-cell-content {
+  height: 14px;
+  width: 80%;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  .skeleton-line,
+  .skeleton-avatar,
+  .skeleton-avatar-large,
+  .skeleton-avatar-small,
+  .skeleton-media,
+  .skeleton-action-btn,
+  .skeleton-follow-btn,
+  .skeleton-header-cell,
+  .skeleton-cell-content {
+    background: linear-gradient(90deg, #3a3a3a 25%, #4a4a4a 50%, #3a3a3a 75%);
+    background-size: 200% 100%;
+  }
+
+  .skeleton-post,
+  .skeleton-user,
+  .skeleton-table {
+    background: #2c3e50;
+  }
+
+  .skeleton-table-header {
+    background: #34495e;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skeleton-post {
+    padding: 16px;
+  }
+
+  .skeleton-user {
+    padding: 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skeleton-table-header,
+  .skeleton-table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,151 @@
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+.error-container {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.error-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.error-container h2 {
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.error-container p {
+  color: #6c757d;
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.error-details {
+  text-align: left;
+  margin: 20px 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.error-details summary {
+  padding: 12px 16px;
+  background: #e9ecef;
+  cursor: pointer;
+  font-weight: 500;
+  color: #495057;
+}
+
+.error-stack {
+  padding: 16px;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #dc3545;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.retry-btn,
+.reload-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.retry-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+}
+
+.retry-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.reload-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.reload-btn:hover {
+  background: #545b62;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  .error-boundary {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  }
+
+  .error-container {
+    background: #343a40;
+    color: #f8f9fa;
+  }
+
+  .error-container h2 {
+    color: #f8f9fa;
+  }
+
+  .error-details {
+    background: #495057;
+  }
+
+  .error-details summary {
+    background: #6c757d;
+    color: #f8f9fa;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-container {
+    padding: 24px;
+    margin: 16px;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .retry-btn,
+  .reload-btn {
+    width: 100%;
+  }
+}
